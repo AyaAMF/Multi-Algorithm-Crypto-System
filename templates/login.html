@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Cyber Security Login</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="login-box">
+
+<div class="login-header">
+
+<i class="fa-solid fa-shield-halved"></i>
+
+<h1>Cyber Security</h1>
+
+<p>Secure Encryption System</p>
+
+</div>
+
+<form method="POST">
+
+<div class="input-group">
+
+<label>
+
+<i class="fa-solid fa-user"></i>
+Username
+
+</label>
+
+<input type="text"
+name="username"
+placeholder="Enter Username">
+
+</div>
+
+<div class="input-group">
+
+<label>
+
+<i class="fa-solid fa-lock"></i>
+Password
+
+</label>
+
+<input type="password"
+name="password"
+placeholder="Enter Password">
+
+</div>
+
+<button type="submit">
+
+<i class="fa-solid fa-right-to-bracket"></i>
+Login
+
+</button>
+
+</form>
+
+<p class="error">{{ error }}</p>
+
+</div>
+
+</body>
+
+</html>

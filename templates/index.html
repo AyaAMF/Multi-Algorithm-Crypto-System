@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Cyber Security System</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="top-bar">
+
+<h1>
+<i class="fa-solid fa-shield-halved"></i>
+Cyber Security System
+</h1>
+
+</div>
+
+<form method="POST">
+
+<div class="input-group">
+
+<label>
+<i class="fa-solid fa-keyboard"></i>
+Enter Message
+</label>
+
+<textarea name="text"
+placeholder="Type your secret message here..."></textarea>
+
+</div>
+
+<div class="input-group">
+
+<label>
+<i class="fa-solid fa-lock"></i>
+Choose Algorithm
+</label>
+
+<select name="algorithm">
+
+<option value="caesar">Caesar Cipher</option>
+
+<option value="atbash">Atbash Cipher</option>
+
+<option value="mono">Monoalphabetic Cipher</option>
+
+<option value="row">Row Column Cipher</option>
+
+<option value="playfair">Playfair Cipher</option>
+
+</select>
+
+</div>
+
+<div class="input-group">
+
+<label>
+<i class="fa-solid fa-key"></i>
+Enter Key
+</label>
+
+<input type="text"
+name="key"
+placeholder="Enter encryption key">
+
+</div>
+
+<div class="buttons">
+
+<button type="submit"
+name="action"
+value="encrypt">
+
+<i class="fa-solid fa-lock"></i>
+Encrypt
+
+</button>
+
+<button type="submit"
+name="action"
+value="decrypt">
+
+<i class="fa-solid fa-unlock"></i>
+Decrypt
+
+</button>
+
+</div>
+
+</form>
+
+<div class="result-box">
+
+<h2>
+
+<i class="fa-solid fa-terminal"></i>
+Result
+
+</h2>
+
+<p>{{ result }}</p>
+
+</div>
+
+</div>
+
+</body>
+
+</html>
